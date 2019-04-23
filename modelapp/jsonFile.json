@@ -12,20 +12,121 @@
   },
   {
     "model": "MAZDA",
-    "price": 250,
+    "price": 200,
     "color": "WHITE",
     "mileage": 2500,
     "components": [
       "BLUETOOTH",
-      "AIR CONDITIONING"
+      "AIR CONDITIONING",
+      "RADIO"
     ]
   },
   {
-    "model": "MAZDA",
-    "price": 250,
-    "color": "WHITE",
-    "mileage": 2500,
+    "model": "FIAT",
+    "price": 20,
+    "color": "GREEN",
+    "mileage": 5000,
     "components": [
+      "RADIO",
+      "ABS"
+    ]
+  },
+  {
+    "model": "VOLVO",
+    "price": 300,
+    "color": "ORANGE",
+    "mileage": 0,
+    "components": [
+      "BLUETOOTH",
+      "AIR CONDITIONING",
+      "SOFT FOLDING TOP"
+    ]
+  },
+  {
+    "model": "LAMBORGHINI",
+    "price": 500,
+    "color": "GOLD",
+    "mileage": 100,
+    "components": [
+      "AUTOMATIC GEARBOX",
+      "NITROUS OXIDE CYLINDER",
+      "AIR CONDITIONING",
+      "BLUETOOTH",
+      "RADIO"
+    ]
+  },
+  {
+    "model": "MITSUBISHI",
+    "price": 300,
+    "color": "BLUE",
+    "mileage": 0,
+    "components": [
+      "AIR CONDITIONING",
+      "BLUETOOTH",
+      "ABS"
+    ]
+  },
+  {
+    "model": "TOYOTA",
+    "price": 200,
+    "color": "PURPLE",
+    "mileage": 200,
+    "components": [
+      "RADIO",
+      "ABS"
+    ]
+  },
+  {
+    "model": "FORD",
+    "price": 40,
+    "color": "WHITE",
+    "mileage": 400,
+    "components": [
+      "RADIO"
+    ]
+  },
+  {
+    "model": "NISSAN",
+    "price": 0,
+    "color": "SILVER",
+    "mileage": 600,
+    "components": [
+      "AIR CONDITIONING",
+      "BLUETOOTH",
+      "ABS"
+    ]
+  },
+  {
+    "model": "HONDA",
+    "price": 500,
+    "color": "ORANGE",
+    "mileage": 0,
+    "components": [
+      "AIR CONDITIONING",
+      "BLUETOOTH",
+      "RADIO",
+      "ALLOY WHEELS"
+    ]
+  },
+  {
+    "model": "PORSCHE",
+    "price": 350,
+    "color": "PINK",
+    "mileage": -1,
+    "components": [
+      "AIR CONDITiONING",
+      "BLUEToOTH",
+      "RAdiO",
+      "ALLoY WHEELS"
+    ]
+  },
+  {
+    "model": "RENAULT",
+    "price": 120,
+    "color": "GREY",
+    "mileage": 40,
+    "components": [
+      "RADIO",
       "BLUETOOTH"
     ]
   }

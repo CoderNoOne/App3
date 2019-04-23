@@ -1,6 +1,7 @@
 package main;
 
 import exceptions.CarException;
+import model.car.Car;
 import model.sorting.MySort;
 import service.CarService;
 import service.UserDataService;
@@ -8,6 +9,7 @@ import service.UserDataService;
 import java.math.BigDecimal;
 import java.text.MessageFormat;
 import java.util.Arrays;
+import java.util.List;
 
 public class MenuService {
   private final CarService carService;
@@ -76,7 +78,11 @@ public class MenuService {
   }
 
   private void option9() {
-    System.out.println(carService.mapByComponents());
+    carService.mapByComponents().forEach((component, carList) -> {
+      System.out.println("\nComponent:" + component +
+              ":\n ");
+      carList.forEach(car -> System.out.println("Car: " + car));
+    });
   }
 
   private void option8() {
@@ -87,16 +93,17 @@ public class MenuService {
 
     MySort sortingAlgorithms = userDataService.getSortingAlgorithm("INPUT YOUR SORTING ALGORITHMS");
 
-    System.out.println(carService.sort(sortingAlgorithms));
+    carService.sort(sortingAlgorithms).forEach(car -> System.out.println("Car: " + car));
 
   }
 
   private void option6() {
-    System.out.println(carService.colorMap());
+    carService.colorMap().forEach((color, count) -> System.out.println("color:\t" + color + "\t->\tcount: " + count));
+
   }
 
   private void option5() {
-    System.out.println(carService.toString());
+    carService.getCars().forEach(car -> System.out.println("Car: " + car));
   }
 
   private void option4() {
@@ -107,7 +114,7 @@ public class MenuService {
   }
 
   private void option3() {
-    System.out.println(carService.mostExpensiveCars());
+    carService.mostExpensiveCars().forEach(car -> System.out.println("Car: " + car));
   }
 
   private void option2() {
@@ -132,33 +139,30 @@ public class MenuService {
             "\nOption no. 1 - {0}\n" +
                     "Option no. 2 - {1}\n" +
                     "Option no. 3 - {2}\n" +
+                    "Option no. 4 - {3}\n" +
                     "Option no. 5 - {4}\n" +
                     "Option no. 6 - {5}\n" +
                     "Option no. 7 - {6}\n" +
                     "Option no. 8 - {7}\n" +
                     "Option no. 9 - {8}\n" +
-                    "Option no. 4 - {3}\n" +
                     "Option no. 10 - {9}\n" +
                     "Option no. 11 - {10}\n" +
                     "Option no. 12  -{11}",
 
-
             "List cars with mileage greater than specified",
             "Cars with price within range",
             "List of most expensive cars",
-            "Map of most expenive car in regards to car's model",
+            "Map of most expensive cars in regards to car's model",
             "Show all cars",
             "Map <Color, Integer>",
-            "Sort cars in respect to specified criterium with sorting order(asc/desc)",
+            "Sort cars in respect to specified criterion with sorting order(asc/desc)",
             "Car collection with sorted components list",
-            "Map By Components ",
+            "Car Components",
             "Car Statistics",
             "Exit the program",
-            "Show menu options"
+            "Show the menu options"
     );
-
     System.out.println(menu);
-
   }
 
 }

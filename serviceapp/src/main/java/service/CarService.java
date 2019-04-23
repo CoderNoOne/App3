@@ -111,17 +111,23 @@ public class CarService {
                     list -> {
                       IntSummaryStatistics mileAgeStats = list.stream().map(el -> Integer.parseInt(String.valueOf(el[0]))).collect(Collectors.summarizingInt(in -> in));
                       PriceCollector.PriceSummary priceStats = list.stream().map(el -> new BigDecimal(String.valueOf(el[1]))).collect(new PriceCollector());
-                      return "Mileage Statistics\n: MAX: " + mileAgeStats.getMax() + " MIN: " + mileAgeStats.getMin()
+                      return "Mileage Statistics:\n MAX: " + mileAgeStats.getMax() + " MIN: " + mileAgeStats.getMin()
                               + " AVG: " + mileAgeStats.getAverage() +
-                              "\nPrice Statistics\n: MAX: " + priceStats.getMax() + " MIN: " + priceStats.getMin() +
+                              "\nPrice Statistics:\n MAX: " + priceStats.getMax() + " MIN: " + priceStats.getMin() +
                               " AVG: " + priceStats.getSum().divide(BigDecimal.valueOf(priceStats.getN()), 2, RoundingMode.HALF_UP);
                     }));
 
     System.out.println(result);
   }
 
+  public List<Car> getCars() {
+    return cars;
+  }
+
   @Override
   public String toString() {
-    return cars.toString();
+    return "CarService{" +
+            "cars=" + cars +
+            '}';
   }
 }

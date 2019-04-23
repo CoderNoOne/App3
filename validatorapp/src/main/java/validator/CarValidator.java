@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CarValidator {
+public class CarValidator implements Validator <Car> {
   private Map<String, String> errors = new HashMap<>();
 
   public Map<String, String> validate(Car car) {
@@ -46,7 +46,7 @@ public class CarValidator {
   }
 
   private boolean isMileageValid(Car car) {
-    return car.getMileage() > 0;
+    return car.getMileage() >= 0;
   }
 
   private boolean isModelValid(Car car) {

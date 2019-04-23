@@ -84,8 +84,7 @@ public class PriceCollector implements Collector<BigDecimal, PriceCollector.Pric
 
   @Override
   public Function<PriceSummary, PriceSummary> finisher() {
-    /*throw new UnsupportedOperationException();*/
-    return s->s;
+    return Function.identity();
 
   }
 
