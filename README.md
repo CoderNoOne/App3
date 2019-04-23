@@ -2,7 +2,7 @@
 
 The application utilizes java modules and Java 8 STREAM API. The program reads cars details directly from json file, validates them and finally calculate some car statistics, which can be choosen via the main menu options. 
 
-#2. How to use it?
+# 2. How to use it?
 
 Download the project:
 
