@@ -90,16 +90,12 @@ public class MenuService {
   }
 
   private void option7() {
-
     MySort sortingAlgorithms = userDataService.getSortingAlgorithm("INPUT YOUR SORTING ALGORITHMS");
-
     carService.sort(sortingAlgorithms).forEach(car -> System.out.println("Car: " + car));
-
   }
 
   private void option6() {
     carService.colorMap().forEach((color, count) -> System.out.println("color:\t" + color + "\t->\tcount: " + count));
-
   }
 
   private void option5() {
